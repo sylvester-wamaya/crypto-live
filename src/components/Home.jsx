@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import CoinCard from './CoinCard'
 
 
 const Home = () => {
@@ -22,8 +23,8 @@ console.log(coins)
     <div>
       {
 coins.map((coin)=>(
-   
-    <div style={{width:'100px', height:'100px', backgroundColor:`${coin.color}`, backgroundImage:`url(${coin.iconUrl})`,backgroundSize:'contain'}}>{coin.name}</div>
+  <CoinCard color={coin.color} icon={coin.iconUrl} name={coin.name}/> 
+    
     
 ))
       }
