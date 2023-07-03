@@ -20,7 +20,7 @@ fetchData()
 },[setCoins])
 console.log(coins)
   return (
-    <div>
+    <div className='grid'>
       {
 coins.map((coin)=>(
   <CoinCard color={coin.color} icon={coin.iconUrl} name={coin.name}/> 
