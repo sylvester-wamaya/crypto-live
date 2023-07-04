@@ -36,7 +36,10 @@ a{
   display: flex;
   justify-content: end;
   align-items: center;
+  
 }
 .input input{
   padding: 1% 0.5%;
+  width: 33vw;
+  border: solid 1px #22a079;
 }
