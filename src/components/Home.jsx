@@ -27,8 +27,10 @@ else if(error){
 }
   return (
     <>
-
+      <div className='input'>
+        <label>Search: </label>
       <input type='text' name='name' placeholder='search a coin...' onChange={(e) => setSearch(e.target.value)} />
+      </div>
       <div className='grid'>
 
         {

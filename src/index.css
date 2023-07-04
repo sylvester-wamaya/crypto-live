@@ -32,3 +32,11 @@ a{
 .ban-content p, .ban-content span{
  text-shadow: 2px 2px 4px #000000;
 }
+.input{
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.input input{
+  padding: 1% 0.5%;
+}

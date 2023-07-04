@@ -8,7 +8,7 @@ import styles from '../styles/navbar.module.css'
 const Navbar = () => {
   return (
     <nav className={styles.navbar}>
-      <NavLink><img className={styles.logo} src={logo}/></NavLink>
+      <NavLink to='/'><img className={styles.logo} src={logo}/></NavLink>
     
     </nav>
   )
