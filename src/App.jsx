@@ -3,13 +3,14 @@ import { Route, Routes } from "react-router-dom"
 import Navbar from "./components/Navbar"
 import Home from "./components/Home"
 import CoinCard from "./components/CoinCard"
+import { useSelector } from "react-redux"
 
 
 
 
 function App() {
 
-
+const {coins} = useSelector((store)=>store.coins)
 
 
   return (
@@ -17,7 +18,12 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="detail" element={<CoinCard />} />
+        {
+          coins.map((coin)=>(
+            <Route path={`${coin.symbol}`} element={<CoinCard />} />
+          ))
+        }
+       
       </Routes>
 
     </>
