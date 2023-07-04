@@ -20,7 +20,7 @@ const {coins} = useSelector((store)=>store.coins)
         <Route path="/" element={<Home />} />
         {
           coins.map((coin)=>(
-            <Route path={`${coin.symbol}`} element={<CoinCard />} />
+            <Route path={`${coin.symbol}`} element={<CoinCard/>}  key={coin.symbol}/>
           ))
         }
        

@@ -6,8 +6,8 @@ import { RxExternalLink } from 'react-icons/rx'
 import { PropTypes } from 'prop-types'
 
 const CoinBanner = ({color, icon, name, id, symbol}) => {
-  CoinBanner.prototypes = {
-    color: PropTypes.string.isRequired,
+  CoinBanner.propTypes = {
+    color: PropTypes.string,
     icon: PropTypes.string.isRequired,
     name: PropTypes.string.isRequired,
     id: PropTypes.string.isRequired,
