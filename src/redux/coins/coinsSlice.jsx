@@ -7,7 +7,8 @@ const url = 'https://api.coinranking.com/v2/coins'
 const initialState = {
     coins: [],
     isLoading : false,
-    error: null
+    error: null,
+    selectedCoin: null
 }
 
 export const fetchCoins = createAsyncThunk('coins/fetchCoins', async()=>{
@@ -28,7 +29,9 @@ const coinsSlice = createSlice({
     name: 'coins',
     initialState,
     reducers: {
-
+        viewDetail:(state, action)=>{
+            state.selectedCoin = action.payload
+        }
     },
     extraReducers(build){
         build
@@ -49,5 +52,5 @@ const coinsSlice = createSlice({
     }
 
 })
-
+export const {viewDetail} = coinsSlice.actions
 export default coinsSlice.reducer
