@@ -1,25 +1,12 @@
 /* eslint-disable */
 import React, { useEffect, useState } from 'react'
 import CoinCard from './CoinBanner'
+import { useSelector } from 'react-redux'
 
 
 const Home = () => {
-    const [coins, setCoins] = useState([])
-useEffect(()=>{
-    const fetchData = async()=>{
-        try{
-    const response = await fetch('https://api.coinranking.com/v2/coins')
-    const resdata = await response.json()
-    const coinsData = await resdata.data.coins
+   const {coins} = useSelector((store)=>store.coins)
 
-    setCoins(coinsData)
-    }
-catch(err){
-    console.log(err)
-}}
-fetchData()
-},[setCoins])
-console.log(coins)
 const formatter = new Intl.NumberFormat('en-US', {
   style: 'currency',
   currency: 'USD',
@@ -50,16 +37,16 @@ const formatter = new Intl.NumberFormat('en-US', {
     }
 
     <div className='grid'>
-      { /*
+      { 
 coins.map((coin)=>(
   <CoinCard color={coin.color} icon={coin.iconUrl} name={coin.name} key={coin.uuid}/> 
     
     
 ))
-*/ }
+ }
     </div> 
     </>
   )
 }
 
-export default Home
+export default Home 
