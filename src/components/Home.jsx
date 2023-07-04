@@ -1,45 +1,30 @@
 /* eslint-disable */
 import React, { useEffect, useState } from 'react'
 import CoinCard from './CoinBanner'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
+import { fetchCoins } from '../redux/coins/coinsSlice'
+
 
 
 const Home = () => {
+  const [search, setSearch] = useState('')
    const {coins} = useSelector((store)=>store.coins)
+   const dispatch = useDispatch()
+ useEffect(()=>{
+    if(coins.length === 0){
+      dispatch(fetchCoins())
+    }
+ },[dispatch, coins])
+ const filteredCoins = coins.filter((coin)=>coin.name.toLowerCase().includes(search.toLowerCase())||coin.symbol.toLowerCase().includes(search.toLowerCase()))
 
-const formatter = new Intl.NumberFormat('en-US', {
-  style: 'currency',
-  currency: 'USD',
-});
   return (
     <>
-    {
-      coins.map((coin)=>{
-        if(coins.indexOf(coin)===0){
-          return         <div style={{width:'300px', height:'300px', backgroundColor:`${coin.color + '50'}`}}>
-           <img style={{width:'30%', height:'auto'}} src={coin.iconUrl}/>
-           <p>Name: {coin.name}</p> 
-            <p>Rank: #{coin.rank}</p>
-            <p>Current price: {formatter.format(coin.price)}</p>
-            <p> Change: {coin.change}%</p>
-            <p>Market Cap: {formatter.format(coin.marketCap)}</p>
-            <p>Listed Date: {new Date(coin.listedAt*1000).toLocaleString("en-US",
-    {
-      month: "short",
-      day: "2-digit",
-      year: "numeric",
-    })}</p>
-
-            </div>
-        }
-
-      })
-    }
-
+  <input type='text' name='name' placeholder='search a coin...' onChange={(e)=>setSearch(e.target.value)}/>
     <div className='grid'>
+   
       { 
-coins.map((coin)=>(
-  <CoinCard color={coin.color} icon={coin.iconUrl} name={coin.name} key={coin.uuid}/> 
+filteredCoins.map((coin)=>(
+  <CoinCard color={coin.color} icon={coin.iconUrl} name={coin.name} symbol={coin.symbol} key={coin.uuid}/> 
     
     
 ))

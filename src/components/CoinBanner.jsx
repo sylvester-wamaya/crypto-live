@@ -1,13 +1,14 @@
 /* eslint-disable */
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-const CoinCard = ({color, icon, name}) => {
+const CoinBanner = ({color, icon, name, symbol}) => {
 
   return (
    
-      <a  href='#' style={{width:'100%', height:'50vw', backgroundColor:`${color + '50'}`, backgroundImage:`url(${icon})`,backgroundSize:'contain'}}>{name}</a>
+      <Link to={`${symbol}`} style={{width:'100%', height:'50vw', backgroundColor:`${color + '50'}`, backgroundImage:`url(${icon})`,backgroundSize:'contain'}}>{name}</Link>
    
   )
 }
 
-export default CoinCard
+export default CoinBanner

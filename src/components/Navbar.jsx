@@ -9,7 +9,7 @@ const Navbar = () => {
   return (
     <nav className={styles.navbar}>
       <NavLink><img className={styles.logo} src={logo}/></NavLink>
-      <NavLink><input type='text' name='name' placeholder='search a coin...'/></NavLink>
+    
     </nav>
   )
 }
