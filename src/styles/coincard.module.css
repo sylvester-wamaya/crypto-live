@@ -1,33 +1,38 @@
-.coin{
-    left: 50%;
-    position: fixed;
-    top: 50%;
-    transform: translate(-50%, -50%) scale(1);
-    width: fit-content;
-    height: auto;
-    padding: 2%;
-    border-radius: 5%;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+.coin {
+  left: 50%;
+  position: fixed;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  width: fit-content;
+  height: auto;
+  padding: 2%;
+  border-radius: 5%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
 }
-.icon{
-text-align: center;
-font-weight: 600;
-margin-bottom: 3%;
+
+.icon {
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 3%;
 }
-.icon i{
-    font-weight: 400;
-    font-size: small;
+
+.icon i {
+  font-weight: 400;
+  font-size: small;
 }
-.details{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 2%;
+
+.details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2%;
 }
-.details span{
-    font-weight: 600;
-    color: green;
+
+.details span {
+  font-weight: 600;
+  color: green;
 }
-.listed{
-    text-align: center;
+
+.listed {
+  text-align: center;
 }

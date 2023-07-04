@@ -1,19 +1,23 @@
-body{
+body {
   font-family: 'Courier New', Courier, monospace;
 }
-*{
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-.grid{
+
+.grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
-a{
+
+a {
   text-decoration: none;
 }
-.banner{
+
+.banner {
   padding: 5%;
   width: 100%;
   height: 33vw;
@@ -21,7 +25,8 @@ a{
   border-radius: 2%;
   background-repeat: no-repeat;
 }
-.ban-content{
+
+.ban-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -29,16 +34,19 @@ a{
   font-weight: 800;
   font-size: x-large;
 }
-.ban-content p, .ban-content span{
- text-shadow: 2px 2px 4px #000000;
+
+.ban-content p,
+.ban-content span {
+  text-shadow: 2px 2px 4px #000;
 }
-.input{
+
+.input {
   display: flex;
   justify-content: end;
   align-items: center;
-  
 }
-.input input{
+
+.input input {
   padding: 1% 0.5%;
   width: 33vw;
   border: solid 1px #22a079;

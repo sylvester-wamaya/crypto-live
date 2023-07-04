@@ -1,5 +1,4 @@
-/* eslint-disable */
-import React from 'react'
+
 import { useSelector } from 'react-redux';
 import styles from '../styles/coincard.module.css'
 import {AiFillBackward} from 'react-icons/ai'

@@ -1,5 +1,5 @@
-/* eslint-disable */
-import React, { useEffect, useState } from 'react'
+
+import { useEffect, useState } from 'react'
 import CoinBanner from './CoinBanner'
 import { useDispatch, useSelector } from 'react-redux'
 import { fetchCoins } from '../redux/coins/coinsSlice'
