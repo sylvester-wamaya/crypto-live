@@ -5,8 +5,9 @@
 }
 .navbar{
     display: flex;
+    justify-content: space-between;
     align-items: center;
     margin-bottom: 2% 0;
-    padding-top: 2%;
+    padding: 2% 1% 0 0;
     background-image: linear-gradient( rgba(23, 22, 22, 1), rgba(246, 4, 4, 0.5), rgba(241, 206, 3, 1));
 }
