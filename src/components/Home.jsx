@@ -1,6 +1,6 @@
 /* eslint-disable */
 import React, { useEffect, useState } from 'react'
-import CoinCard from './CoinBanner'
+import CoinBanner from './CoinBanner'
 import { useDispatch, useSelector } from 'react-redux'
 import { fetchCoins } from '../redux/coins/coinsSlice'
 
@@ -19,12 +19,13 @@ const Home = () => {
 
   return (
     <>
+   
   <input type='text' name='name' placeholder='search a coin...' onChange={(e)=>setSearch(e.target.value)}/>
     <div className='grid'>
    
       { 
 filteredCoins.map((coin)=>(
-  <CoinCard color={coin.color} icon={coin.iconUrl} name={coin.name} symbol={coin.symbol} key={coin.uuid}/> 
+  <CoinBanner color={coin.color} icon={coin.iconUrl} name={coin.name} symbol={coin.symbol} id={coin.uuid} key={coin.uuid}/> 
     
     
 ))
