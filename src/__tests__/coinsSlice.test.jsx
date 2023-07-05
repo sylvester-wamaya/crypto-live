@@ -1,4 +1,4 @@
-
+/* eslint-disable */
 import coinsReducer, { fetchCoins } from "../redux/coins/coinsSlice"
  let state = null
 test('test coins reducer for pending', ()=>{    
