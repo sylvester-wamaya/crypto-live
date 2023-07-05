@@ -16,7 +16,7 @@ const CoinBanner = ({color, icon, name, id, symbol}) => {
 const dispatch = useDispatch()
   return (
    
-      <Link to={`${symbol}`} onClick={()=>dispatch(viewDetail(id)) } style={{ backgroundColor:`${color + '50'}`, backgroundImage:`url(${icon})`}} className='banner'><div className='ban-content'><p>{name}</p><span><RxExternalLink/></span></div></Link>
+      <Link to={`${symbol}`} onClick={()=>dispatch(viewDetail(id)) } style={{ backgroundColor:`${color + '50'}`, backgroundImage:`url(${icon})`}} className='banner'><div className='ban-content'><p>{name}</p><span><RxExternalLink style={{backgroundColor:`${color}`}}/></span></div></Link>
    
   )
 }

@@ -10,7 +10,7 @@ body {
 
 .grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 33% 34% 33%;
 }
 
 a {
@@ -32,12 +32,14 @@ a {
   align-items: center;
   color: whitesmoke;
   font-weight: 800;
-  font-size: x-large;
+  font-size: 5vw;
+  overflow:hidden;
 }
 
 .ban-content p,
 .ban-content span {
   text-shadow: 2px 2px 4px #000;
+  
 }
 
 .input {

@@ -8,7 +8,7 @@ const Navbar = () => {
   return (
     <nav className={styles.navbar}>
       <NavLink to='/'><img className={styles.logo} src={logo}/></NavLink>
-      <h2>Cryptocurrency Live</h2>
+      <h2 style={{fontSize:'5vw'}}>Cryptocurrency Live</h2>
     
     </nav>
   )
