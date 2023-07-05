@@ -26,12 +26,17 @@ if(error){
 }
   return (
     <>
-      <div className='input'>
-      <input type='text' name='name' placeholder='Enter a coin...' onChange={(e) => setSearch(e.target.value)} />
-      <div>
-        <p>Total coins: {formatter.format(summary.total)}</p>
-        <p>Total Market cap:  {formatter.format(summary.totalMarketCap)}</p>
+
+    {
+      Object.keys(summary).length !== 0 ? (
+      <div className='summary'>
+        <p>Total coins: <span>{summary.total.toLocaleString("en-US")}</span></p>
+        <p>Total Market cap: <span>{formatter.format(summary.totalMarketCap)}</span></p>
       </div>
+      ) : ''
+}
+<div className='input'>
+      <input type='text' name='name' placeholder='Type to search...' onChange={(e) => setSearch(e.target.value)} />
       </div>
       {
          filteredCoins.length === 0 ? <h3>Oops no Coins!!!</h3> : (
