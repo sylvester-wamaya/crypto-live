@@ -8,6 +8,7 @@
   padding: 2%;
   border-radius: 5%;
   box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
+  margin: 5%;
 }
 
 .icon {
@@ -22,10 +23,10 @@
 }
 
 .details {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 2%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+ gap: 2%;
+  margin-bottom: 1%;
 }
 
 .details span {
@@ -34,5 +35,5 @@
 }
 
 .listed {
-  text-align: center;
+  text-align: center;  
 }
