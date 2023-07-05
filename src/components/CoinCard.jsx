@@ -26,10 +26,10 @@ if(!coin){
           <img style={{ width: '30%', height: 'auto' }} src={coin.iconUrl} />
           <p>{coin.name} (<span>{coin.symbol})</span></p>
           <i>As at: {new Date().toLocaleString()}</i>
-          <p>Rank:<span> #{coin.rank}</span></p>
+          
          </div>
         <div className={styles.details}>
-          
+        <p>Rank:<span> #{coin.rank}</span></p>
           <p>Current price: <span>{formatter.format(coin.price)}</span></p>
          
          
