@@ -8,7 +8,8 @@ const initialState = {
     coins: [],
     isLoading : false,
     error: null,
-    selectedCoin: null
+    selectedCoin: null,
+    summary: {}
 }
 
 export const fetchCoins = createAsyncThunk('coins/fetchCoins', async()=>{
@@ -16,8 +17,7 @@ try
     {    
     const res = await fetch(url)
     const resData = await res.json()
-    //const coinsData = await resData.data.coins
-    return resData.data.coins
+    return resData.data
     }catch(err){
         return err.messege
     }
@@ -41,7 +41,8 @@ const coinsSlice = createSlice({
         }))
         .addCase(fetchCoins.fulfilled, (state, action)=>({
             ...state,
-            coins: action.payload,
+            coins: action.payload.coins,
+            summary: action.payload.stats,
             isLoading: false
         }))
         .addCase(fetchCoins.rejected, (state, action)=>({
