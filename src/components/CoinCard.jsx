@@ -19,7 +19,7 @@ if(!coin){
  
       return (
         <>
-        <AiFillBackward style={{fontSize:'2rem', color:`${coin.color}`}} onClick={()=> navigate('/')}/>
+        <AiFillBackward style={{fontSize:'2rem', color:`${coin.color}`, cursor:'pointer'}} onClick={()=> navigate('/')}/>
         <div style={{backgroundColor: `${coin.color + '50'}` }} className={styles.coin}>
           <div className={styles.icon}>
           <img style={{ width: '30%', height: 'auto' }} src={coin.iconUrl} />
