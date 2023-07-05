@@ -19,10 +19,7 @@ const Home = () => {
 if(isLoading){
   return <h2>Loanding...</h2>
 }
-else if(!filteredCoins){
-  return <h3>Oops no Coins!!!</h3>
-}
-else if(error){
+if(error){
   return <p>{error}</p>
 }
   return (
@@ -31,6 +28,9 @@ else if(error){
         <label>Search: </label>
       <input type='text' name='name' placeholder='Enter a coin...' onChange={(e) => setSearch(e.target.value)} />
       </div>
+      {
+         filteredCoins.length === 0 ? <h3>Oops no Coins!!!</h3> : (
+        
       <div className='grid'>
 
         {
@@ -40,7 +40,8 @@ else if(error){
 
           ))
         }
-      </div>
+      </div>)
+      }
     </>
   )
 }
