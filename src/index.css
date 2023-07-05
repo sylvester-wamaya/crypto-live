@@ -67,6 +67,5 @@ gap: 3%;
 .summary span{
   font-weight: 600;
   text-decoration: underline;
-  gap: 2%;
   color: green;
 }
