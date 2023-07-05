@@ -26,16 +26,16 @@ if(!coin){
           <img style={{ width: '30%', height: 'auto' }} src={coin.iconUrl} />
           <p>{coin.name} (<span>{coin.symbol})</span></p>
           <i>As at: {new Date().toLocaleString()}</i>
-          </div>
-          <div className={styles.details}>
+         </div>
+        <div className={styles.details}>
           <p>Rank:<span> #{coin.rank}</span></p>
           <p>Current price: <span>{formatter.format(coin.price)}</span></p>
-          </div>
-          <div className={styles.details}>
+         
+         
           <p> Change: <span style={{color: coin.change<0 ? 'red' : 'green'}}>{coin.change}%</span></p>
           <p>Market Cap: <span>{formatter.format(coin.marketCap)}</span></p>
+      
           </div>
-        <div className={styles.listed}>
           <p style={{margin:'5% 0'}}>Listed Date: {new Date(coin.listedAt * 1000).toLocaleString("en-US",
             {
               month: "short",
@@ -43,8 +43,9 @@ if(!coin){
               year: "numeric",
             })}</p>
             </div>
+          
 
-        </div>
+        
         </>
       )
     
