@@ -3,12 +3,14 @@ import { useEffect, useState } from 'react'
 import CoinBanner from './CoinBanner'
 import { useDispatch, useSelector } from 'react-redux'
 import { fetchCoins } from '../redux/coins/coinsSlice'
+import { formatter } from './CoinCard'
 
 
 
 const Home = () => {
   const [search, setSearch] = useState('')
-  const { coins, isLoading, error } = useSelector((store) => store.coins)
+  const { coins, isLoading, error, summary } = useSelector((store) => store.coins)
+  console.log(summary)
   const dispatch = useDispatch()
   useEffect(() => {
     if (coins.length === 0) {
@@ -25,9 +27,11 @@ if(error){
   return (
     <>
       <div className='input'>
-        <label>Search:
       <input type='text' name='name' placeholder='Enter a coin...' onChange={(e) => setSearch(e.target.value)} />
-      </label>
+      <div>
+        <p>Total coins: {formatter.format(summary.total)}</p>
+        <p>Total Market cap:  {formatter.format(summary.totalMarketCap)}</p>
+      </div>
       </div>
       {
          filteredCoins.length === 0 ? <h3>Oops no Coins!!!</h3> : (

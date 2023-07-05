@@ -4,15 +4,16 @@ import styles from '../styles/coincard.module.css'
 import {AiFillBackward} from 'react-icons/ai'
 import { useNavigate } from 'react-router-dom';
 
+export const formatter = new Intl.NumberFormat('en-US', {
+  style: 'currency',
+  currency: 'USD',
+});
+
 const CoinCard = () => {
   const { selectedCoin, coins } = useSelector((store) => store.coins)
   const navigate = useNavigate()
   const coinArray = coins.filter((coin)=> coin.uuid === selectedCoin)
   const coin = coinArray[0]
-  const formatter = new Intl.NumberFormat('en-US', {
-    style: 'currency',
-    currency: 'USD',
-  });
 if(!coin){
   return <p>Loading...</p>
 }
@@ -52,5 +53,4 @@ if(!coin){
 
 
 }
-
-export default CoinCard
+export default CoinCard;
