@@ -25,8 +25,9 @@ if(error){
   return (
     <>
       <div className='input'>
-        <label>Search: </label>
+        <label>Search:
       <input type='text' name='name' placeholder='Enter a coin...' onChange={(e) => setSearch(e.target.value)} />
+      </label>
       </div>
       {
          filteredCoins.length === 0 ? <h3>Oops no Coins!!!</h3> : (
