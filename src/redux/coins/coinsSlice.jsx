@@ -9,7 +9,11 @@ const initialState = {
     isLoading : false,
     error: null,
     selectedCoin: null,
-    summary: {}
+    filteredCoins: [],
+    summary: {
+        totalCoins:0,
+        totalMarketCap:0
+    }
 }
 
 export const fetchCoins = createAsyncThunk('coins/fetchCoins', async()=>{
@@ -17,7 +21,7 @@ try
     {    
     const res = await fetch(url)
     const resData = await res.json()
-    return resData.data
+    return resData.data.coins
     }catch(err){
         return err.messege
     }
@@ -31,8 +35,21 @@ const coinsSlice = createSlice({
     reducers: {
         viewDetail:(state, action)=>{
             state.selectedCoin = action.payload
-        }
-    },
+        },
+         getTotal:(state)=>{
+                 let sumCoins = 0
+                 let sumMarketCap = 0
+                 for(let i = 0; i<state.filteredCoins.length; i++){
+                   sumCoins += 1
+                   sumMarketCap += state.filteredCoins[i].marketCap*1
+               }
+                 state.summary.totalCoins = sumCoins
+                 state.summary.totalMarketCap = sumMarketCap
+             },
+            filterCoins:(state, action)=>{
+                state.filteredCoins = state.coins.filter((coin) => coin.name.toLowerCase().includes(action.payload.toLowerCase()) || coin.symbol.toLowerCase().includes(action.payload.toLowerCase()))
+                },
+        },
     extraReducers(build){
         build
         .addCase(fetchCoins.pending, (state)=>({
@@ -41,8 +58,8 @@ const coinsSlice = createSlice({
         }))
         .addCase(fetchCoins.fulfilled, (state, action)=>({
             ...state,
-            coins: action.payload.coins,
-            summary: action.payload.stats,
+            coins: action.payload,
+            filteredCoins: action.payload,
             isLoading: false
         }))
         .addCase(fetchCoins.rejected, (state, action)=>({
@@ -53,5 +70,5 @@ const coinsSlice = createSlice({
     }
 
 })
-export const {viewDetail} = coinsSlice.actions
+export const {viewDetail, filterCoins, getTotal} = coinsSlice.actions
 export default coinsSlice.reducer
