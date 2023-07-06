@@ -1,8 +1,8 @@
-/* eslint-disable */
+
 
 global.fetch = jest.fn(() =>
   Promise.resolve({
-    json: () => Promise.resolve({   coins: [b, m],
+    json: () => Promise.resolve({   coins: [],
         isLoading : false,
         error: null,
         selectedCoin: null,
