@@ -38,7 +38,7 @@
 # 📖 Cryptocurrency Live Application<a name="about-project"></a>
 
 
-Cryptocurrency live application is an application that allows users to view a list of coins, view their prices and search for a specific cryptocurrency coin to view their details. I created the project using HTML, CSS, Javascript,react, API and redux.
+Cryptocurrency live application is an application that allows users to view a list of coins, view their prices and search for a specific cryptocurrency coin to view their details. I created the project using HTML, CSS, Javascript,react, [API](https://api.coinranking.com/v2/coins) and redux.
 
 ## 🛠 Built With <a name="built-with"></a>
 1- HTML.
@@ -77,6 +77,7 @@ Cryptocurrency live application is an application that allows users to view a li
 - Added a search input.
 - Added a grid of crypto coins.
 - Added the view details of a coin.
+- Fetch data from an API
 
 
 
