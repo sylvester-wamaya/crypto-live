@@ -1,14 +1,19 @@
-
+/* eslint-disable */
 import { Route, Routes } from "react-router-dom"
 import Navbar from "./components/Navbar"
 import Home from "./components/Home"
 import CoinCard from "./components/CoinCard"
-import { useSelector } from "react-redux"
+import { useDispatch, useSelector } from "react-redux"
+import { useEffect } from "react"
+import { fetchCoins, filterCoins, getTotal } from "./redux/coins/coinsSlice"
 
 
 
 
 function App() {
+
+const dispatch = useDispatch()
+dispatch(getTotal())
 
 const {coins} = useSelector((store)=>store.coins)
 
