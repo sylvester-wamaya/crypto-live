@@ -139,6 +139,8 @@ To run tests, execute the following command:
 >  ```npm test ```
 
 
+### Demo
+> [The application demo video](https://www.loom.com/share/71c1ab974cba450699daef7573e81eb6?sid=e0baa1bc-623a-4866-9983-ad36ca0c2c69)
 
 ### Deployment
 
