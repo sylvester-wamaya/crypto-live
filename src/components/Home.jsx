@@ -19,7 +19,7 @@ const Home = () => {
 
   
 if(isLoading){
-  return <h2>Loanding...</h2>
+  return <h2>Loading...</h2>
 }
 if(error){
   return <p>{error}</p>
