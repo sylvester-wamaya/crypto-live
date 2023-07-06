@@ -9,7 +9,7 @@ test('test coins reducer for fulfilled', ()=>{
     state = coinsReducer(undefined, fetchCoins.fulfilled())
     expect(state.isLoading).toBe(false)
 })
-test('test coins reducer for fulfilled', ()=>{    
+test('test coins reducer for rejected', ()=>{    
     state = coinsReducer(undefined, fetchCoins.rejected())
     expect(state.isLoading).toBe(false)
 })

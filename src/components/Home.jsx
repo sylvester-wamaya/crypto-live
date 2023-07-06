@@ -1,9 +1,9 @@
-/*eslint-disable */
-import { useEffect, useState } from 'react'
+
+import { useEffect } from 'react'
 import CoinBanner from './CoinBanner'
 import { useDispatch, useSelector } from 'react-redux'
 import { fetchCoins, filterCoins } from '../redux/coins/coinsSlice'
-import { formatter } from './CoinCard'
+
 
 
 
@@ -17,20 +17,17 @@ const Home = () => {
   }, [dispatch, coins])
 
 
-  function sumCoin(){let sumCoins = 0
-  for(let i = 0; i<state.filteredCoins.length; i++){
-       sumCoins += 1
-   }
-      state.summary.totalCoins = sumCoins
- }
-  console.log(summary)
-
+  
 if(isLoading){
   return <h2>Loanding...</h2>
 }
 if(error){
   return <p>{error}</p>
 }
+const formatter = new Intl.NumberFormat('en-US', {
+  style: 'currency',
+  currency: 'USD',
+});
   return (
     <>
 

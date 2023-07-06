@@ -25,7 +25,7 @@
 .details {
   display: grid;
   grid-template-columns: 1fr 1fr;
- gap: 2%;
+  gap: 2%;
   margin-bottom: 1%;
 }
 
@@ -35,5 +35,5 @@
 }
 
 .listed {
-  text-align: center;  
+  text-align: center;
 }
