@@ -1,0 +1,39 @@
+.coin {
+  left: 50%;
+  position: fixed;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  width: fit-content;
+  height: auto;
+  padding: 2%;
+  border-radius: 5%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
+  margin: 5%;
+}
+
+.icon {
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 3%;
+}
+
+.icon i {
+  font-weight: 400;
+  font-size: small;
+}
+
+.details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2%;
+  margin-bottom: 1%;
+}
+
+.details span {
+  font-weight: 600;
+  color: green;
+}
+
+.listed {
+  text-align: center;
+}

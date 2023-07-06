@@ -38,7 +38,7 @@
 # 📖 Cryptocurrency Live Application<a name="about-project"></a>
 
 
-Cryptocurrency live application is an application that allows users to do view a list of coins, view their prices and search for a specific cryptocurrency coin to view their details. I created the project using HTML, CSS, Javascript,react, API and redux.
+Cryptocurrency live application is an application that allows users to view a list of coins, view their prices and search for a specific cryptocurrency coin to view their details. I created the project using HTML, CSS, Javascript,react, [API](https://api.coinranking.com/v2/coins) and redux.
 
 ## 🛠 Built With <a name="built-with"></a>
 1- HTML.
@@ -73,6 +73,12 @@ Cryptocurrency live application is an application that allows users to do view a
 
 
 - Added Project setup
+- Added a header.
+- Added a search input.
+- Added a grid of crypto coins.
+- Added the view details of a coin.
+- Fetch data from an API
+
 
 
 
@@ -129,14 +135,16 @@ npm run dev
 
 
 ### Run tests
+To run tests, execute the following command:
+>  ```npm test ```
 
-> Coming soon
 
-
+### Demo
+> [The application demo video](https://www.loom.com/share/71c1ab974cba450699daef7573e81eb6?sid=e0baa1bc-623a-4866-9983-ad36ca0c2c69)
 
 ### Deployment
 
-> Coming soon
+> [Live demo link](https://steady-kheer-81bdb4.netlify.app/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -159,7 +167,7 @@ npm run dev
 ## 🔭 Future Features <a name="future-features"></a>
 
 - [ ] Add more styling
-- [ ] Add personalized content
+- [ ] Add more details on the coin
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -189,7 +197,8 @@ If you like this project give it a ⭐.
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
 
-I would like to thank Microverse for their continued support and inspiration.
+I would like to thank Microverse for their continued support and inspiration. 
+[Nelson Sakwa](https://www.behance.net/sakwadesignstudio) is the [Author of the original design](https://www.behance.net/gallery/31579789/Ballhead-App-(Free-PSDs))
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
