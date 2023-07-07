@@ -29,8 +29,8 @@ const formatter = new Intl.NumberFormat('en-US', {
   currency: 'USD',
 });
   return (
-    <>
-
+    <section>
+<div className='sticky'>
     {
       Object.keys(summary).length !== 0 ? (
       <div className='summary'>
@@ -43,6 +43,7 @@ const formatter = new Intl.NumberFormat('en-US', {
       <input type='text' name='name' placeholder='type to search...' onChange={(e) =>( 
         dispatch(filterCoins(e.target.value))
         )} />
+      </div>
       </div>
       {
          filteredCoins.length === 0 ? <h3>Oops no Coins!!!</h3> : (
@@ -58,7 +59,7 @@ const formatter = new Intl.NumberFormat('en-US', {
         }
       </div>)
       }
-    </>
+    </section>
   )
 }
 
