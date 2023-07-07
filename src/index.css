@@ -71,3 +71,13 @@ input {
   text-decoration: underline;
   color: green;
 }
+
+section {
+  position: relative;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+  background-color: rgb(247, 245, 242);
+}
