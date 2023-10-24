@@ -18,7 +18,7 @@ const {coins} = useSelector((store)=>store.coins)
 
 
   return (
-    <>
+    <div className="mobile-frame">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -30,7 +30,7 @@ const {coins} = useSelector((store)=>store.coins)
        
       </Routes>
 
-    </>
+    </div>
   )
 }
 
