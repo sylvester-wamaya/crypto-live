@@ -8,7 +8,7 @@
   padding: 10px;
   border-radius: 15px;
   box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
- margin-top: 2.2rem;
+  margin-top: 2.2rem;
 }
 
 .icon {
@@ -26,7 +26,6 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2%;
- 
 }
 
 .details span {

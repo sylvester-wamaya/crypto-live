@@ -8,6 +8,7 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
+
 .mobile-frame {
   margin: 10px auto;
   width: 375px;
@@ -20,7 +21,8 @@ body {
   overflow-y: auto;
   position: relative;
 }
-.mobile-frame::-webkit-scrollbar{
+
+.mobile-frame::-webkit-scrollbar {
   display: none;
 }
 
